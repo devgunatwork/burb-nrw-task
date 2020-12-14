@@ -10,7 +10,7 @@ const HomePage = () => (
   <div className={styles.root}>
     <Typography variant="h1">Shows Available</Typography>
     <Typography variant="h4">
-      <StyledLink to="/shows/6771/the-powerpuff-girls">The Powerpuff girls</StyledLink>
+      <StyledLink to="/shows/6771">The Powerpuff girls</StyledLink>
     </Typography>
   </div>
 );

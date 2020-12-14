@@ -13,7 +13,7 @@ exports[`views HomePage UI should match the snapshot 1`] = `
     variant="h4"
   >
     <StyledLink
-      to="/shows/6771/the-powerpuff-girls"
+      to="/shows/6771"
     >
       The Powerpuff girls
     </StyledLink>

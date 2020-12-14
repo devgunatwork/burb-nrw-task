@@ -1,17 +1,17 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import EPISODE_SHAPE from '../../shapes/episode.shape';
+import StyledLink from '../StyledLink';
 
 const EpisodeItem = ({ episode }) => {
-  const { name, number, season, url } = episode;
+  const { id, name, number, season } = episode;
 
   return (
     <ListItem alignItems="flex-start">
-      <Link target="_blank" href={url} color="inherit">
+      <StyledLink to={`/episode/${id}`}>
         <ListItemText primary={`${season}.${number} ${name}`} />
-      </Link>
+      </StyledLink>
     </ListItem>
   );
 };
