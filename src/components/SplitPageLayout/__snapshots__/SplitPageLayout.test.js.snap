@@ -12,7 +12,11 @@ exports[`components SplitPageLayout UI should match the snapshot 1`] = `
     <WithStyles(ForwardRef(Grid))
       className="leftSide"
       item={true}
-      xs={6}
+      lg={6}
+      md={6}
+      sm={12}
+      xl={4}
+      xs={12}
     >
       <img
         alt="not available"
@@ -22,7 +26,11 @@ exports[`components SplitPageLayout UI should match the snapshot 1`] = `
     <WithStyles(ForwardRef(Grid))
       className="rightSide"
       item={true}
-      xs={6}
+      lg={6}
+      md={6}
+      sm={12}
+      xl={8}
+      xs={12}
     />
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
