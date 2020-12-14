@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views EpisodeDetailPage UI should match the snapshot 1`] = `
+<SplitPageLayout
+  imageUrl="http://static.tvmaze.com/uploads/images/original_untouched/127/319448.jpg"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h5"
+  >
+    EPISODE DETAILS
+  </WithStyles(ForwardRef(Typography))>
+  <Details
+    name="Sideline Dad"
+    summary="<p>When the Girls start playing soccer, the Professor goes overboard.</p>"
+  />
+</SplitPageLayout>
+`;
