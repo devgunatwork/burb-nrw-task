@@ -1,0 +1,9 @@
+# File Options
+files:
+  include: './**/*.scss'
+  ignore:
+    - './node_modules/**/*.scss'
+
+rules:
+  property-sort-order: 0
+  no-important: 0
