@@ -1,0 +1,21 @@
+.root {
+  position: relative;
+
+  .leftSide {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+
+    img {
+      height: 100%;
+      width: 100%
+    }
+  }
+
+  .rightSide {
+    padding: 1em 2em;
+    position: absolute;
+    right: 0;
+  }
+}
