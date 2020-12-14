@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views HomePage UI should match the snapshot 1`] = `
+<div
+  className="root"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h1"
+  >
+    Shows Available
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    variant="h4"
+  >
+    <StyledLink
+      to="/shows/6771/the-powerpuff-girls"
+    >
+      The Powerpuff girls
+    </StyledLink>
+  </WithStyles(ForwardRef(Typography))>
+</div>
+`;

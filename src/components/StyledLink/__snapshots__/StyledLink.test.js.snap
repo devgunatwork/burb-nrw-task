@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components StyledLink UI should match the snapshot 1`] = `
+<Link
+  className="root"
+  to="/test"
+/>
+`;

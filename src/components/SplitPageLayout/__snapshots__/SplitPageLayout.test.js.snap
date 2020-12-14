@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components SplitPageLayout UI should match the snapshot 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <WithStyles(ForwardRef(Grid))
+    className="root"
+    container={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      className="leftSide"
+      item={true}
+      xs={6}
+    >
+      <img
+        alt="not available"
+        src=""
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      className="rightSide"
+      item={true}
+      xs={6}
+    />
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
