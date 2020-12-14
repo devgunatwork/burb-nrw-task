@@ -1,1 +1,3 @@
-export const INCREMENT_ASYNC = 'counter/incrementAsync'
+const INCREMENT_ASYNC = 'counter/incrementAsync';
+
+export default INCREMENT_ASYNC;
