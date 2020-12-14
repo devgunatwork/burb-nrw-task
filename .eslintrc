@@ -5,6 +5,11 @@
     "es6": true,
     "jest": true
   },
+  "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true
+  },
   "plugins": [
     "react",
     "react-hooks",

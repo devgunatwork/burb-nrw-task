@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components EpisodeItem UI should match the snapshot 1`] = `
+<WithStyles(ForwardRef(ListItem))
+  alignItems="flex-start"
+>
+  <WithStyles(ForwardRef(Link))
+    color="inherit"
+    href="test url"
+    target="_blank"
+  >
+    <WithStyles(ForwardRef(ListItemText))
+      primary="1.1 name"
+    />
+  </WithStyles(ForwardRef(Link))>
+</WithStyles(ForwardRef(ListItem))>
+`;

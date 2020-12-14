@@ -1,0 +1,32 @@
+@import "src/style/mixins/mixins";
+
+.root {
+  position: relative;
+  min-width: 360px;
+
+  .leftSide {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .rightSide {
+    padding: 1em 2em;
+    position: absolute;
+    max-height: 100vh;
+    right: 0;
+  }
+
+  @include media(screen-xs, screen-sm) {
+    .leftSide, .rightSide {
+      position: relative;
+    }
+  }
+}

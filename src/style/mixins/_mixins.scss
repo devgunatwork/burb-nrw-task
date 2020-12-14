@@ -1,0 +1,9 @@
+@import "src/style/variables/variables";
+
+@mixin media($keys...){
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key)){
+      @content;
+    }
+  }
+}
