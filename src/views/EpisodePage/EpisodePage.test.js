@@ -1,5 +1,5 @@
 import React from 'react';
-import EpisodeDetailPage from './EpisodeDetailPage';
+import EpisodePage from './EpisodePage';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -9,10 +9,10 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('views', () => {
-  describe('EpisodeDetailPage', () => {
+  describe('EpisodePage', () => {
     describe('UI', () => {
       it('should match the snapshot', () => {
-        const wrapper = shallow(<EpisodeDetailPage />);
+        const wrapper = shallow(<EpisodePage />);
 
         expect(wrapper).toMatchSnapshot();
       });

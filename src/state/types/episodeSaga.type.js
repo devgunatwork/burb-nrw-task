@@ -1,0 +1,5 @@
+const EPISODE_FETCH_REQUESTED = 'episode/requested';
+const EPISODE_FETCH_SUCCEEDED = 'episode/succeeded';
+const EPISODE_FETCH_FAILED = 'episode/failed';
+
+export { EPISODE_FETCH_REQUESTED, EPISODE_FETCH_SUCCEEDED, EPISODE_FETCH_FAILED };

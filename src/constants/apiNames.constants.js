@@ -1,5 +1,7 @@
 const { REACT_APP_TVMAZE_ROOT_URL } = process.env;
-const GET_SHOW_URL = `${REACT_APP_TVMAZE_ROOT_URL}/shows`;
-const EPISODE_ENDPOINT = `/episodes`;
 
-export { GET_SHOW_URL, EPISODE_ENDPOINT };
+const EPISODE_ENDPOINT = `/episodes`;
+const GET_SHOW_URL = `${REACT_APP_TVMAZE_ROOT_URL}/shows`;
+const GET_EPISODE_URL = `${REACT_APP_TVMAZE_ROOT_URL}/episodes`;
+
+export { GET_EPISODE_URL, GET_SHOW_URL, EPISODE_ENDPOINT };

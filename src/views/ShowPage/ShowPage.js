@@ -9,10 +9,8 @@ import EpisodeList from '../../components/EpisodeList';
 import SplitPageLayout from '../../components/SplitPageLayout';
 import checkImageUrl from '../../utils/checkImageUrl';
 import { FAILED, IDLE, LOADING } from '../../constants/apiState.constants';
-import {
-  EPISODE_LIST_FETCH_REQUESTED,
-  SHOW_FETCH_REQUESTED,
-} from '../../state/types/showSaga.type';
+import { SHOW_FETCH_REQUESTED } from '../../state/types/showSaga.type';
+import { EPISODE_LIST_FETCH_REQUESTED } from '../../state/types/episodeListSaga.type';
 
 /**
  * @description component is container for show page
