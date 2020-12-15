@@ -8,7 +8,7 @@ import Details from '../../components/Details';
 import EpisodeList from '../../components/EpisodeList';
 import SplitPageLayout from '../../components/SplitPageLayout';
 import checkImageUrl from '../../utils/checkImageUrl';
-import { FAILED, IDLE, LOADING } from '../../constants/apiState.constants';
+import { FAILED, LOADING } from '../../constants/apiState.constants';
 import { SHOW_FETCH_REQUESTED } from '../../state/types/showSaga.type';
 import { EPISODE_LIST_FETCH_REQUESTED } from '../../state/types/episodeListSaga.type';
 
@@ -29,13 +29,11 @@ const ShowPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (showRequestStatus === IDLE) {
-      batch(() => {
-        dispatch({ type: SHOW_FETCH_REQUESTED, payload: { showId } });
-        dispatch({ type: EPISODE_LIST_FETCH_REQUESTED, payload: { showId } });
-      });
-    }
-  }, [dispatch, showId, showRequestStatus]);
+    batch(() => {
+      dispatch({ type: SHOW_FETCH_REQUESTED, payload: { showId } });
+      dispatch({ type: EPISODE_LIST_FETCH_REQUESTED, payload: { showId } });
+    });
+  }, [showId, dispatch]);
 
   if (showRequestStatus === LOADING) return <Loader />;
   if (showRequestStatus === FAILED) return <Error message="Failed to fetch show details" />;

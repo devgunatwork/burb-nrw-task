@@ -1,6 +1,86 @@
-# Getting Started with Create React App
+# About
+SPA(no full-page refresh when navigating between those routes) with 4 pages (routes): 
+ 1. [Landing page](http://localhost:3000/)
+ 1. [Show detail page](http://localhost:3000/shows/6771): a details page for the TV show "Powerpuff Girls" & "The Mandalorian"
+ 1. [Episode detail page](http://localhost:3000/episode/657308): an episode detail page with information about specific episodes.
+ 1. [404 page](http://localhost:3000/idontexist): in case route doesn't exist
+ 
+## Tech Used 
+**react**: to render UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**redux**: latest version with RTK(Redux toolkit) for state management
+
+**redux-saga**: middleware to manage application side effects.
+
+**sass**: for styling the components, using mixins etc. (module based)
+
+**material-ui**: to avoid reinventing the wheel
+
+**prop-types**: to validate data 
+
+**ES6**: extensively used.
+
+**Jest, Enzyme**: for unit testing
+
+**husky**: to add git hooks before a commit and push
+
+## Static code quality
+
+To maintain clean, well-structured, extendable I used
+
+1. ES linter
+1. Prettier
+1. Sass linter
+
+## Code quality checks
+
+To avoid commiting undesirable code, I used husky for 2 git hooks:
+1. pre-commit: it checks & automatically fix js lint errors.
+1. pre-push: it checks & automatically fix js & style lint errors. In addition, it checks minimum test coverage threshold.
+
+## Design
+Show page and Episode page share common design. 
+
+Design is responsive with two breakpoints defined in sass mixins and grid handling through materia ui.
+ 
+## Goals
+Show page should at least display the following information:
+1. Show title
+1. Show Description
+1. Show cover image
+1. Episode list: Every episode in the list should link to a details page for that specific episode
+
+The episode detail page should contain at least: 
+1. Episode title
+1. Episode Summary
+1. Episode cover image
+
+## Deliverables
+- [x] Check in all your source code into Git repository. 
+
+- [x] Branching strategy used: feature based.
+
+- [x] The end result has to be available in the master branch.
+
+- [x] App should run from local web server (localhost). 
+
+- [x] Documentation on running the app
+
+- [x] Code comments in english provided wherever required.
+
+## Getting started
+
+To get the frontend running locally:
+
+- Clone this repo
+- run `yarn` to install all req'd dependencies
+- use `yarn start` to run the project
+
+## API Used
+Data retrieved from the TV Maze API (http://www.tvmaze.com/api). 
+
+API fails at times because of CORS issue to avoid this `https://cors-anywhere.herokuapp.com/` has been used.
+There are still sample response available in case API doesn't respond.
 
 ## Available Scripts
 
@@ -39,32 +119,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

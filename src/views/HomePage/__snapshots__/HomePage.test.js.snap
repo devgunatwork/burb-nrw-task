@@ -17,6 +17,13 @@ exports[`views HomePage UI should match the snapshot 1`] = `
     >
       The Powerpuff girls
     </StyledLink>
+     
+    <br />
+    <StyledLink
+      to="/shows/38963"
+    >
+      The Mandalorian
+    </StyledLink>
   </WithStyles(ForwardRef(Typography))>
 </div>
 `;

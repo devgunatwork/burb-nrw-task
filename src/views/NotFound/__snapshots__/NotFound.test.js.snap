@@ -1,14 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`views NotFound UI should match the snapshot 1`] = `
-<div>
-  <h1>
-    404 - Not Found!
-  </h1>
-  <Link
-    to="/"
+<div
+  className="root"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="h1"
   >
-    Go Home
-  </Link>
+    404 - Not Found!
+  </WithStyles(ForwardRef(Typography))>
+  <WithStyles(ForwardRef(Typography))
+    variant="h4"
+  >
+    <StyledLink
+      to="/"
+    >
+      Go Home
+    </StyledLink>
+     
+    <br />
+  </WithStyles(ForwardRef(Typography))>
 </div>
 `;

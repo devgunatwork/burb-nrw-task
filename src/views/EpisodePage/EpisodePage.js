@@ -22,7 +22,7 @@ const EpisodePage = () => {
 
   useEffect(() => {
     dispatch({ type: EPISODE_FETCH_REQUESTED, payload: { episodeId } });
-  }, [episodeId]);
+  }, [episodeId, dispatch]);
 
   if (episodeRequestStatus === LOADING) return <Loader />;
   if (episodeRequestStatus === FAILED) return <Error message="Failed to fetch episode details" />;
