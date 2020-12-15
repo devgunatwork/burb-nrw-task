@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ShowPage from './ShowPage';
-import { initialState } from './showSlice';
+import { initialState as showInitialState } from './showSlice';
+import { initialState as episodeListInitialState } from './episodeListSlice';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -18,7 +19,9 @@ describe('views', () => {
   describe('ShowPage', () => {
     describe('UI', () => {
       it('should match the snapshot when loading', () => {
-        useSelector.mockImplementation((selector) => selector({ show: initialState }));
+        useSelector.mockImplementation((selector) =>
+          selector({ show: showInitialState, episodeList: episodeListInitialState })
+        );
         const wrapper = shallow(<ShowPage />);
 
         expect(wrapper).toMatchSnapshot();
