@@ -1,41 +1,51 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { batch, useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+import Error from '../../components/Error';
 import Loader from '../../components/Loader';
 import Details from '../../components/Details';
 import EpisodeList from '../../components/EpisodeList';
 import SplitPageLayout from '../../components/SplitPageLayout';
 import checkImageUrl from '../../utils/checkImageUrl';
-import { episodeListSample } from './sampleResponse';
-import { SHOW_FETCH_REQUESTED } from '../../state/types/showSaga.type';
 import { FAILED, IDLE, LOADING } from '../../constants/apiState.constants';
-import Error from '../../components/Error';
+import {
+  EPISODE_LIST_FETCH_REQUESTED,
+  SHOW_FETCH_REQUESTED,
+} from '../../state/types/showSaga.type';
 
 /**
  * @description component is container for show page
  * */
 const ShowPage = () => {
-  const dispatch = useDispatch();
-  const { showId } = useParams();
-  const showStatus = useSelector((state) => state.show.status);
-  const showDetails = useSelector((state) => state.show.details);
-  const { image, name, summary } = showDetails;
+  const {
+    show: { details, status: showRequestStatus },
+    episodeList: { list },
+  } = useSelector((state) => ({
+    show: state.show,
+    episodeList: state.episodeList,
+  }));
+  const { image, name, summary } = details;
   const url = checkImageUrl(image);
+  const { showId } = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (showStatus === IDLE) {
-      dispatch({ type: SHOW_FETCH_REQUESTED, payload: { showId } });
+    if (showRequestStatus === IDLE) {
+      batch(() => {
+        dispatch({ type: SHOW_FETCH_REQUESTED, payload: { showId } });
+        dispatch({ type: EPISODE_LIST_FETCH_REQUESTED, payload: { showId } });
+      });
     }
-  }, [dispatch, showId, showStatus]);
+  }, [dispatch, showId, showRequestStatus]);
 
-  if (showStatus === LOADING) return <Loader />;
-  if (showStatus === FAILED) return <Error message="Failed to fetch show details" />;
+  if (showRequestStatus === LOADING) return <Loader />;
+  if (showRequestStatus === FAILED) return <Error message="Failed to fetch show details" />;
   return (
     <SplitPageLayout imageUrl={url}>
       <Details name={name} summary={summary} id={showId} />
       <Typography variant="h5">EPISODE LIST:</Typography>
-      <EpisodeList episodes={episodeListSample} />
+      <EpisodeList episodes={list} />
     </SplitPageLayout>
   );
 };

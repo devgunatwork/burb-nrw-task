@@ -2,13 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 import { FAILED, IDLE, LOADING, SUCCEEDED } from '../../constants/apiState.constants';
 
 export const initialState = {
-  details: {},
+  list: [],
   status: IDLE,
   error: '',
 };
 
-export const showSlice = createSlice({
-  name: 'show',
+export const episodeListSlice = createSlice({
+  name: 'episodeList',
   initialState,
   reducers: {
     requested: (state) => {
@@ -16,7 +16,7 @@ export const showSlice = createSlice({
     },
     succeeded: (state, action) => {
       state.status = SUCCEEDED;
-      state.details = action.payload.show;
+      state.list = action.payload.episodeList;
     },
     failed: (state, action) => {
       state.status = FAILED;
@@ -25,6 +25,6 @@ export const showSlice = createSlice({
   },
 });
 
-export const { requested, succeeded, failed } = showSlice.actions;
+export const { requested, succeeded, failed } = episodeListSlice.actions;
 
-export default showSlice.reducer;
+export default episodeListSlice.reducer;
