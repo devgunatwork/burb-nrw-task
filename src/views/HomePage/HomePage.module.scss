@@ -1,8 +1,6 @@
+@import "src/style/mixins/mixins";
+
 .root {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+  @include pageCenter;
   min-width: 800px;
 }

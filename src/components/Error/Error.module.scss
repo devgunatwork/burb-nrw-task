@@ -1,0 +1,7 @@
+@import "src/style/variables/variables";
+@import "src/style/mixins/mixins";
+
+.root {
+  @include pageCenter;
+  color: $error-severe-color;
+}
