@@ -14,9 +14,7 @@ const Details = ({ name, summary }) => {
       <Typography className={styles.name} variant="h4" gutterBottom>
         {name}
       </Typography>
-      <Typography variant="body1" gutterBottom>
-        {summary}
-      </Typography>
+      <div dangerouslySetInnerHTML={{ __html: summary }} />
     </>
   );
 };

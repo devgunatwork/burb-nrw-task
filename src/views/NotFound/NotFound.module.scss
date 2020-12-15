@@ -1,0 +1,6 @@
+@import "src/style/mixins/mixins";
+
+.root {
+  @include pageCenter;
+  min-width: 800px;
+}

@@ -7,7 +7,7 @@ import { initialState as episodeListInitialState } from './episodeListSlice';
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useParams: () => ({
-    id: '1234',
+    showId: '1234',
   }),
 }));
 jest.mock('react-redux', () => ({

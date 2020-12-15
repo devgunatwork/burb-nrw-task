@@ -1,21 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`views ShowPage UI should match the snapshot when loading 1`] = `
+exports[`views EpisodePage UI should match the snapshot 1`] = `
 <SplitPageLayout
   imageUrl="/assets/images/404.png"
 >
+  <WithStyles(ForwardRef(Typography))
+    variant="h5"
+  >
+    EPISODE DETAILS
+  </WithStyles(ForwardRef(Typography))>
   <Details
     id="1234"
     name=""
     summary=""
-  />
-  <WithStyles(ForwardRef(Typography))
-    variant="h5"
-  >
-    EPISODE LIST:
-  </WithStyles(ForwardRef(Typography))>
-  <EpisodeList
-    episodes={Array []}
   />
 </SplitPageLayout>
 `;

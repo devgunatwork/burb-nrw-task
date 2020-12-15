@@ -7,9 +7,12 @@ exports[`components Details UI should match the snapshot 1`] = `
     gutterBottom={true}
     variant="h4"
   />
-  <WithStyles(ForwardRef(Typography))
-    gutterBottom={true}
-    variant="body1"
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
   />
 </Fragment>
 `;

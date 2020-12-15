@@ -5,7 +5,7 @@ import {
   EPISODE_LIST_FETCH_FAILED,
   EPISODE_LIST_FETCH_REQUESTED,
   EPISODE_LIST_FETCH_SUCCEEDED,
-} from '../types/showSaga.type';
+} from '../types/episodeListSaga.type';
 
 function* fetchEpisodeList(action) {
   try {
@@ -17,8 +17,8 @@ function* fetchEpisodeList(action) {
   }
 }
 
-function* watchEpisodeSaga() {
+function* watchEpisodeListSaga() {
   yield takeEvery(EPISODE_LIST_FETCH_REQUESTED, fetchEpisodeList);
 }
 
-export default watchEpisodeSaga;
+export default watchEpisodeListSaga;
